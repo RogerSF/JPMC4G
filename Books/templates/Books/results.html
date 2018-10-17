@@ -1,0 +1,7 @@
+<h1>{{ author.first_name }}, {{ author.last_name }}</h1>
+<ul>
+{% for book in author.book_set.all %}
+<li>{{ book.title }} --  {{book.popularity}}vote</li>
+{% endfor %}
+</ul>
+<a href="{% url 'Books:detail' author.id %}">Vote again?</a>

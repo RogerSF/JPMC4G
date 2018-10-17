@@ -1,0 +1,9 @@
+{% if author_list %}
+	<ul>
+	{% for author in author_list %}
+		<li><a href="{% url 'Books:detail' author.id %}">{{ author.first_name }}</a> , {{author.last_name}}: {{author.age}} years old</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No registered authors yet.</p>
+{% endif %}
