@@ -1,3 +1,10 @@
+{% extends "Books/layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block body %}
 {% if author_list %}
 	<ul>
 	{% for author in author_list %}
@@ -7,3 +14,4 @@
 {% else %}
 	<p>No registered authors yet.</p>
 {% endif %}
+{% endblock %}

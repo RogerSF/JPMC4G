@@ -1,3 +1,10 @@
+{% extends "Books/layout.html" %}
+
+{% block title %}
+   Voting Results
+{% endblock %}
+
+{% block body %}
 <h1>{{ author.first_name }}, {{ author.last_name }}</h1>
 <ul>
 {% for book in author.book_set.all %}
@@ -5,3 +12,4 @@
 {% endfor %}
 </ul>
 <a href="{% url 'Books:detail' author.id %}">Vote again?</a>
+{% endblock %}

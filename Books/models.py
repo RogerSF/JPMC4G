@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from django.contrib.auth.models import User
 
 from django.db import models
 
 # Create your models here.
 # get returns the first match 1 and only 1
 # filter returns a set of matches, and you need to select(array operations)
+
 
 class Publisher(models.Model): # a subclass of django.db.models.Model
 	name = models.CharField(max_length=30)
@@ -30,10 +32,13 @@ class Author(models.Model):
 
 class Book(models.Model):
 	title = models.CharField(max_length=100)
-	authors = models.ManyToManyField(Author)
-	publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
+	authors = models.ManyToManyField(Author) #for 1 book to have multiple authors
+	publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE) 
 	publication_date = models.DateField(auto_now_add=True, blank=True)
 	popularity = models.FloatField(default=0.6)
+	holder = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+	lentout = models.BooleanField(default=False)
+	returndate = models.DateField(auto_now_add=True)
 
 	def __str__(self):
 		return self.title

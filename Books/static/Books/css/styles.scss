@@ -1,0 +1,352 @@
+$my-green: #09c416;
+$my-light-green: #b5ffb7;
+$dark-background: #110028;
+$my-red: #ff2848;
+$font-stack: 'Josefin Sans', sans-serif;
+
+
+#home-intro {
+    text-align: center;
+    margin-top: 5%;
+}
+
+%my-button {
+    background-color: $dark-background;
+    color: $my-green;
+    height: 40px;
+    font-family: $font-stack;
+}
+
+#add-position-button {
+    @extend %my-button;
+    width: 100%;
+    font-weight: bold;
+}
+#add-position-button:hover {
+    background-color: $my-green;
+    color: $dark-background;
+}
+
+#remove-position-button {
+    background-color: $dark-background;
+    color: $my-red;
+    height: 40px;
+    font-family: $font-stack;
+    width: 100%;
+    font-weight: bold;
+}
+
+#remove-position-button:hover {
+    background-color: $my-red;
+    color: $dark-background;
+}
+
+.summary-feed {
+    margin-top: 2%;
+    text-align: center;
+}
+
+#logout-form {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#home-form {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+#logout-button, #home-button {
+    @extend %my-button;
+    width: 200px;
+    font-weight: bold;
+}
+
+#close-position-button {
+    background-color: white;
+    color: $my-red;
+    height: 40px;
+    font-family: $font-stack;
+    font-weight: bold;
+}
+
+#close-position-button:hover {
+    background-color: $my-red;
+    color: white;
+}
+
+#send-position-button {
+    background-color: white;
+    color: $my-green;
+    height: 40px;
+    font-family: $font-stack;
+    font-weight: bold;
+}
+
+#send-position-button:hover {
+    background-color: $my-green;
+    color: white;
+}
+
+@media (max-width: 481px) {
+    #logout-button, #home-button {
+        width: 150px;
+    }
+    .hide-on-small-screen {
+        display: none;
+    }
+}
+@media (min-width: 482px) {
+    .hide-on-big-screen {
+        display: none;
+    }
+}
+
+
+#login-button, #signup-button {
+    @extend %my-button;
+    width: 100%;
+    font-weight: bold;
+    font-size: 130%;
+    height: 40px;
+}
+
+#login-button:hover, #signup-button:hover {
+    background-color: $my-green;
+    color: $dark-background;
+}
+
+#logout-button:hover, #home-button:hover {
+    background-color: $my-green;
+    color: $dark-background;
+}
+
+%text-format {
+    font-family: $font-stack;
+    font-size: 350%;
+    font-weight: bold;
+}
+
+#new-user {
+    color: $my-green;
+    font-size: 110%;
+    font-family: $font-stack;
+}
+
+#user-heading {
+    @extend %text-format;
+    color: white;
+}
+
+.summary-metric {
+    @extend %text-format;
+    color: $my-green;
+}
+
+.auth-heading {
+    @extend %text-format;
+    color: white;
+    text-align: center;
+    margin-top: 14%;
+}
+
+#portfolio-background {
+    background-color: $dark-background;
+}
+
+.my-thead {
+    background-color: $dark-background;
+    color: white;
+    font-family: $font-stack;
+    font-size: 140%;
+}
+
+.table-row-body {
+    background-color: $dark-background;
+    color: $my-green;
+    font-family: $font-stack;
+    font-size: 130%;
+}
+
+.table-row-body:hover {
+    background-color: $my-green;
+    color: $my-light-green;
+}
+
+h1 {
+    color: purple;
+}
+
+.auth-form {
+    width: 70%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    .auth-label {
+        font-family: $font-stack;
+        font-size: 130%;
+        color: $my-green;
+    }
+}
+
+.add-position-label {
+    font-family: $font-stack;
+    font-size: 130%;
+    color: $dark-background;
+}
+
+.add-position-placeholder {
+    font-family: $font-stack;
+    font-size: 100%;
+    color: $dark-background;
+}
+
+.home-feed {
+    text-align: center;
+    margin-top: 8%;
+    .asset-title {
+        color: white;
+        font-weight: bold;
+        font-size: 160%;
+    }
+    .home-price {
+        list-style-type: none;
+        color: $my-green;
+        font-family: $font-stack;
+        font-size: 140%;
+        .home-data-title {
+            margin-top: 10px;
+        }
+        .home-data-data {
+            margin-top: 10px;
+        }
+    }
+}
+
+.home-page-text {
+    color: white;
+    font-family: $font-stack;
+    font-size: 350%;
+    font-weight: bold;
+}
+
+#project-name {
+    margin-top: 25px;
+    margin-left: 25px;
+    display: inline-block;
+}
+
+#login-form-button {
+    display: inline-block;
+    float: right;
+    margin-top: 25px;
+    margin-right: 25px;
+    #login-button-home {
+        @extend %my-button;
+        font-weight: bold;
+        font-size: 120%;
+    }
+    #login-button-home:hover {
+        background-color: $my-green;
+        color: $dark-background;
+    }
+}
+
+#logout-form-button {
+    display: inline-block;
+    float: right;
+    margin-top: 25px;
+    margin-right: 25px;
+    #logout-button-home {
+        @extend %my-button;
+        font-weight: bold;
+        font-size: 120%;
+    }
+    #logout-button-home:hover {
+        background-color: $my-green;
+        color: $dark-background;
+    }
+}
+
+#signup-form-button {
+    display: inline-block;
+    float: right;
+    margin-top: 25px;
+    margin-right: 25px;
+    #signup-button-home {
+        @extend %my-button;
+        font-weight: bold;
+        font-size: 120%;
+    }
+    #signup-button-home:hover {
+        background-color: $my-green;
+        color: $dark-background;
+    }
+}
+
+#home-background, .auth-background {
+    background-color: $dark-background;
+}
+
+.invalid {
+    color: $my-red;
+    font-family: $font-stack;
+}
+
+.border-table td {
+    border-color: white;
+}
+.border-table th {
+    border: none;
+}
+
+#portfolio-view {
+    width: 100%;
+    #portfolio-header {
+        text-align: center;
+    }
+    tbody, thead {
+        display: block;
+    }
+    tbody {
+        height: 370px;
+        text-align: center;
+        width: 100%;
+    }
+    tbody::-webkit-scrollbar {
+        width: 10px;
+        background-color: $my-light-green;
+    }
+    tbody::-webkit-scrollbar-thumb {
+        background: $my-green;
+    }
+    thead th, tbody td {
+        width: 15.8%;
+        text-align: left;
+    }
+
+}
+
+#portfolio-form-button {
+    text-align: center;
+}
+
+#portfolio-button {
+    @extend %my-button;
+    width: 55%;
+    font-weight: bold;
+    font-size: 150%;
+    height: 45px;
+}
+
+#portfolio-button:hover {
+    background-color: $my-green;
+    color: $dark-background;
+}
+
+.hidden {
+    display: none;
+}

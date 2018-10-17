@@ -1,11 +1,18 @@
+{% extends "Books/layout.html" %}
 
+{% block title %}
+    Author List
+{% endblock %}
+
+{% block body %}
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <form action="{% url 'Books:vote' author.id %}" method="post">
 {% csrf_token %}
 {% for book in author.book_set.all %}
 <input type="radio" name="book" id="book{{ forloop.counter }}" value="{{book.id}}">
-<label for="book{{ forloop.counter }}">{{ book.title }} (popularity: {{book.popularity}})</label><br>
+<label for="book{{ forloop.counter }}">{{ book.title }}  (popularity: {{book.popularity}})</label><br>
 {% endfor %}
 <input type="submit" value="Vote">
 </form> 
+{% endblock %}
